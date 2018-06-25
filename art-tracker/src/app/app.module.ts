@@ -3,9 +3,12 @@ import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./containers/app/app.component";
 
+// feature modules
+import { AuthModule } from "../auth/auth.module";
+
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent]
 })
