@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { SharedModule } from "../../../shared/shared.module";
 
-import { LoginComponent } from './login.component';
+import { LoginComponent } from "./login.component";
 
-describe('LoginComponent', () => {
+describe("LoginComponent", () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
+      declarations: [LoginComponent],
+      imports: [SharedModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
