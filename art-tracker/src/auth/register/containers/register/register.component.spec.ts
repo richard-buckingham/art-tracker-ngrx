@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { SharedModule } from "../../../shared/shared.module";
 
-import { RegisterComponent } from './register.component';
+import { RegisterComponent } from "./register.component";
 
-describe('RegisterComponent', () => {
+describe("RegisterComponent", () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegisterComponent ]
-    })
-    .compileComponents();
+      declarations: [RegisterComponent],
+      imports: [SharedModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('RegisterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
